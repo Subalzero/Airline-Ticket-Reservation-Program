@@ -27,6 +27,8 @@ public class SignupPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         firstNameLabel = new javax.swing.JLabel();
         lastNameLabel = new javax.swing.JLabel();
@@ -35,29 +37,56 @@ public class SignupPanel extends javax.swing.JPanel {
         lastNameField = new javax.swing.JTextField();
         destinationBox = new javax.swing.JComboBox<>();
         ticketBtn = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         firstNameStatusLabel = new javax.swing.JLabel();
         lastNameStatusLabel = new javax.swing.JLabel();
         flightDestinationStatusLabel = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(102, 255, 255));
+        setLayout(null);
+
+        jButton3.setText("Back");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        add(jButton3);
+        jButton3.setBounds(50, 600, 168, 43);
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true)), "Ticket"));
+        jPanel1.setLayout(null);
+
         jLabel1.setFont(new java.awt.Font("Sitka Text", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Create Ticket");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(400, 30, 227, 31);
 
         firstNameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         firstNameLabel.setText("First Name         :");
+        jPanel1.add(firstNameLabel);
+        firstNameLabel.setBounds(150, 190, 144, 22);
 
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lastNameLabel.setText("Last Name         :");
+        jPanel1.add(lastNameLabel);
+        lastNameLabel.setBounds(150, 240, 143, 22);
 
         flightDestinationLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         flightDestinationLabel.setText("Flight Destination:");
+        jPanel1.add(flightDestinationLabel);
+        flightDestinationLabel.setBounds(150, 290, 143, 22);
 
         firstNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 firstNameFieldActionPerformed(evt);
             }
         });
+        jPanel1.add(firstNameField);
+        firstNameField.setBounds(310, 190, 318, 26);
+        jPanel1.add(lastNameField);
+        lastNameField.setBounds(310, 240, 319, 26);
 
         data.PlaneSchedule[] plane = new data.PlaneSchedule[data.StaticData.planeData.size()];
         for(int i = 0; i < plane.length; i++) {
@@ -74,6 +103,8 @@ public class SignupPanel extends javax.swing.JPanel {
                 destinationBoxActionPerformed(evt);
             }
         });
+        jPanel1.add(destinationBox);
+        destinationBox.setBounds(310, 290, 319, 26);
 
         ticketBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         ticketBtn.setText("Get Your Ticket");
@@ -82,80 +113,17 @@ public class SignupPanel extends javax.swing.JPanel {
                 ticketBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(ticketBtn);
+        ticketBtn.setBounds(410, 400, 232, 60);
+        jPanel1.add(firstNameStatusLabel);
+        firstNameStatusLabel.setBounds(650, 190, 315, 26);
+        jPanel1.add(lastNameStatusLabel);
+        lastNameStatusLabel.setBounds(650, 240, 315, 26);
+        jPanel1.add(flightDestinationStatusLabel);
+        flightDestinationStatusLabel.setBounds(650, 290, 315, 26);
 
-        jButton3.setText("Back");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1133, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(553, 553, 553))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(ticketBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(115, 115, 115))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(firstNameLabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(firstNameField))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(flightDestinationLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lastNameLabel, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(destinationBox, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(firstNameStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastNameStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(flightDestinationStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jLabel1)
-                .addGap(105, 105, 105)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(firstNameStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(firstNameLabel)
-                        .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lastNameLabel)
-                    .addComponent(lastNameStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(flightDestinationStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(flightDestinationLabel)
-                        .addComponent(destinationBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(81, 81, 81)
-                .addComponent(ticketBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(159, 159, 159)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
+        add(jPanel1);
+        jPanel1.setBounds(200, 40, 990, 530);
     }// </editor-fold>//GEN-END:initComponents
 
     private void firstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameFieldActionPerformed
@@ -209,6 +177,7 @@ public class SignupPanel extends javax.swing.JPanel {
     private javax.swing.JLabel flightDestinationStatusLabel;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField lastNameField;
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JLabel lastNameStatusLabel;

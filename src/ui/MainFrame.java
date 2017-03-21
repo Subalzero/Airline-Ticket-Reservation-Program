@@ -1,18 +1,27 @@
 package ui;
 import javax.swing.*;
 import data.*;
+import java.awt.event.*;
+import de.javasoft.plaf.synthetica.SyntheticaPlainLookAndFeel;
+import java.text.ParseException;
 
 /**
  *
  * @author Acer
  */
 public class MainFrame extends JFrame {
-      
+    
+    private JMenuBar menuBar;
+    private JMenu helpMenu;
+    private JMenuItem aboutMenu;
+    
     public MainFrame() {
         initComponents();
     }
     
     private void initComponents() {
+        
+        menuBar = new JMenuBar();
         
         StaticData.loginPanel = new Login();
         
@@ -24,26 +33,28 @@ public class MainFrame extends JFrame {
         
         add(StaticData.loginPanel);
         StaticData.loginPanel.setVisible(true);
+        
+        helpMenu = new JMenu("Help");
+        helpMenu .setMnemonic(KeyEvent.VK_N);
+        helpMenu .getAccessibleContext().setAccessibleDescription(
+            "This menu does nothing");
+        
+        aboutMenu = new JMenuItem("About");
+        helpMenu.add(aboutMenu);
+        
+        menuBar.add(helpMenu);
+        
+        
+        setJMenuBar(menuBar);
     }
     
     
     private static void setUILook() {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        try 
+        {
+            UIManager.setLookAndFeel(new SyntheticaPlainLookAndFeel());
+        } 
+        catch (ParseException | UnsupportedLookAndFeelException e) {}
     }
     
     public static void main(String[] args) {

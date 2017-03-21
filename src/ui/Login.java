@@ -29,22 +29,16 @@ public class Login extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bookbtn = new javax.swing.JButton();
         adminLogbtn = new javax.swing.JButton();
+        logo1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        bookbtn = new javax.swing.JButton();
         cancelFlightBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 204, 204));
         setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(0, 51, 102)));
         setPreferredSize(new java.awt.Dimension(1920, 1080));
-
-        bookbtn.setBackground(java.awt.Color.green);
-        bookbtn.setFont(new java.awt.Font("Papyrus", 0, 24)); // NOI18N
-        bookbtn.setText("Book New Flight");
-        bookbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bookbtnActionPerformed(evt);
-            }
-        });
+        setLayout(null);
 
         adminLogbtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         adminLogbtn.setText("Login as Admin");
@@ -53,6 +47,26 @@ public class Login extends javax.swing.JPanel {
                 adminLogbtnActionPerformed(evt);
             }
         });
+        add(adminLogbtn);
+        adminLogbtn.setBounds(40, 600, 213, 48);
+        add(logo1);
+        logo1.setBounds(170, 120, 500, 360);
+
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 255)));
+        jPanel1.setForeground(new java.awt.Color(153, 153, 255));
+        jPanel1.setLayout(null);
+
+        bookbtn.setBackground(new java.awt.Color(255, 0, 0));
+        bookbtn.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        bookbtn.setText("Book New Flight");
+        bookbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bookbtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(bookbtn);
+        bookbtn.setBounds(10, 90, 364, 91);
 
         cancelFlightBtn.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         cancelFlightBtn.setText("Cancel Flight");
@@ -61,36 +75,11 @@ public class Login extends javax.swing.JPanel {
                 cancelFlightBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(cancelFlightBtn);
+        cancelFlightBtn.setBounds(60, 210, 264, 68);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(adminLogbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(1073, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(bookbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(473, 473, 473))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(cancelFlightBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(528, 528, 528))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(533, Short.MAX_VALUE)
-                .addComponent(bookbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75)
-                .addComponent(cancelFlightBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(187, 187, 187)
-                .addComponent(adminLogbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68))
-        );
+        add(jPanel1);
+        jPanel1.setBounds(810, 130, 390, 370);
     }// </editor-fold>//GEN-END:initComponents
 
     private void adminLogbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLogbtnActionPerformed
@@ -124,5 +113,7 @@ public class Login extends javax.swing.JPanel {
     private javax.swing.JButton adminLogbtn;
     private javax.swing.JButton bookbtn;
     private javax.swing.JButton cancelFlightBtn;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel logo1;
     // End of variables declaration//GEN-END:variables
 }
